@@ -1,0 +1,248 @@
+##############################################################################
+# desolation.des: Maps for the Desolation of Salt.
+##############################################################################
+
+##############################################################################
+# Desolation mini-ruins entries
+
+##############################################################################
+NAME:   desolation_ruin_diamond_intact
+ORIENT: float
+TAGS:   desolation_ruin transparent
+SHUFFLE: ABC
+SUBST: A=c
+SUBST: BC=.
+MAP
+............
+.....cc.....
+....cccc....
+...ccBBcc...
+..ccC..Ccc..
+.ccB.AA.....
+.ccB.AA.....
+..ccC..Ccc..
+...ccBBcc...
+....cccc....
+.....cc.....
+............
+ENDMAP
+
+NAME:   desolation_ruin_diamond_wrecked
+ORIENT: float
+TAGS:   desolation_ruin transparent
+SUBST: A=c.
+SUBST: B=x.
+MAP
+............
+.....AA.....
+....AAcc....
+...AA.cc...
+..AA....cc..
+.Ac...ABxBB.
+.cc..AcBxBB.
+..cc....cc..
+...cc..cc...
+....cccc....
+.....cc.....
+............
+ENDMAP
+
+NAME:   desolation_ruin_lobes
+ORIENT: float
+TAGS:   desolation_ruin transparent
+WEIGHT: 20
+SHUFFLE: AB
+SUBST: A=c
+SUBST: B=.
+SHUFFLE: Cc
+SUBST: C=c:50 .
+MAP
+............
+.cccc..cccc.
+.c..cBBc..c.
+.c..AAAA..c.
+.ccA....ccc.
+..BA.BB.....
+..BA.BB.....
+.ccA....ccc.
+.c..AAAA..c.
+.c..cBBc..c.
+.cccc..cccc.
+............
+ENDMAP
+
+NAME:   desolation_ruin_twins_intact
+ORIENT: float
+TAGS:   desolation_ruin transparent
+SHUFFLE: AB
+SUBST: A=c
+SUBST: B=.
+MAP
+............
+.cccc..cccc.
+.cA.c..c.Ac.
+.c.Bc..cB.c.
+.c.cc..cc.c.
+.c........c.
+.c........c.
+.c.cc..cc.c.
+.c.Bc..cB.c.
+.cA.c..c.Ac.
+.cccc..cccc.
+............
+ENDMAP
+
+NAME:   desolation_ruin_twins_wrecked
+ORIENT: float
+TAGS:   desolation_ruin transparent
+SUBST: A=c.
+SUBST: B=x.
+SUBST: C=cx
+MAP
+...BBB......
+.cCCCBBcccc.
+.cc.Cxxc.cc.
+.c..C..c..c.
+.c.cc..cc.c.
+.c....BxB.A.
+.c...BxxB...
+.c.cc.BBc.A.
+.c..c..c..c.
+.c..c..c..c.
+.cccc..cccc.
+............
+ENDMAP
+
+NAME:   desolation_ruin_cross_small
+ORIENT: float
+WEIGHT: 5
+TAGS:   desolation_ruin transparent
+SHUFFLE: AB
+SUBST: A=c
+SUBST: B=.
+MAP
+............
+....cccc....
+....c..c....
+...Bc..cB...
+.cccA..Accc.
+.c..........
+.c..........
+.cccA..Accc.
+...Bc..cB...
+....c..c....
+....cccc....
+............
+ENDMAP
+
+NAME:   desolation_ruin_cross_large
+ORIENT: float
+WEIGHT: 5
+TAGS:   desolation_ruin transparent
+SHUFFLE: AB/CD/EF
+SUBST: ABCF=c
+SUBST: DE=.
+MAP
+............
+...cccccc...
+...c....c...
+.ccc.AA.ccc.
+.c........c.
+.c.A.BB.A...
+.c.A.BB.A...
+.c........c.
+.ccc.AA.ccc.
+...c....c...
+...cccccc...
+............
+ENDMAP
+
+NAME:   desolation_ruin_cross_wrecked
+ORIENT: float
+TAGS:   desolation_ruin transparent
+SUBST: A=c.
+SUBST: B=x.
+SUBST: C=cx
+MAP
+............
+....Accc....
+....A..c....
+....c..c...B
+.AAc...cccCB
+.A.....BBxxB
+.c......BxxB
+.ccAA..cccCB
+....c..c...B
+....A..c....
+....Accc....
+............
+ENDMAP
+
+NAME:   desolation_ruin_round
+ORIENT: float
+TAGS:   desolation_ruin transparent
+WEIGHT: 20
+SHUFFLE: AD
+SHUFFLE: BE
+SHUFFLE: CF
+SUBST: ABC=c
+SUBST: DEF=.
+SHUFFLE: Cc
+SUBST: C=c:50 .
+MAP
+............
+...cccccc...
+..cc.CC.cc..
+.cc......cc.
+.c...cc...B.
+.cC.cAAc....
+.cC.cAAc....
+.c...cc...B.
+.cc......cc.
+..cc.CC.cc..
+...cccccc...
+............
+ENDMAP
+
+NAME:   desolation_ruin_pillars_intact
+ORIENT: float
+TAGS:   desolation_ruin transparent
+SHUFFLE: AC
+SHUFFLE: BD
+SUBST: AB=c
+SUBST: CD=.
+MAP
+............
+....c..c....
+..A......A..
+....cccc....
+.c.cc..cc.c.
+...B........
+...B........
+.c.cc..cc.c.
+....cccc....
+..A......A..
+....c..c....
+............
+ENDMAP
+
+NAME:   desolation_ruin_pillars_wrecked
+ORIENT: float
+TAGS:   desolation_ruin transparent
+SUBST: A = c.
+SUBST: B = x.
+NSUBST: C = 7:c / *:.
+MAP
+............
+....C..C....
+..C......C..
+....AAAc....
+.C..c..cB.C.
+...c..xxB...
+...A...xBB..
+.C.AA..ccBB.
+....cccc....
+..C......C..
+....C..C....
+............
+ENDMAP

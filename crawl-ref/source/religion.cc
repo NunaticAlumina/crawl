@@ -564,11 +564,18 @@ void dec_penance(god_type god, int val)
                      mi->del_ench(ENCH_AWAKEN_FOREST);
             }
         }
-        else if (god == GOD_PAKELLAS)
+        else
         {
-            // Penance just ended w/o worshipping Pakellas;
-            // notify the player that MP regeneration will start again.
-            mprf(MSGCH_GOD, god, "You begin regenerating magic.");
+            if (god == GOD_PAKELLAS)
+            {
+                // Penance just ended w/o worshipping Pakellas;
+                // notify the player that MP regeneration will start again.
+                mprf(MSGCH_GOD, god, "You begin regenerating magic.");
+            } else if (god == GOD_HEPLIAKLQANA)
+            {
+                calc_hp(); // frailty ends
+                mprf(MSGCH_GOD, god, "Your full life essence returns.");
+            }
         }
     }
     else if (god == GOD_NEMELEX_XOBEH && you.penance[god] > 100)
@@ -3397,6 +3404,8 @@ static void _join_hepliaklqana()
         you.props[HEPLIAKLQANA_ALLY_GENDER_KEY] = female ? GENDER_FEMALE
                                                          : GENDER_MALE;
     }
+
+    calc_hp(); // adjust for frailty
 
     // Complimentary ancestor upon joining.
     const mgen_data mg = hepliaklqana_ancestor_gen_data();

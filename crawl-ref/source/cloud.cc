@@ -1614,9 +1614,7 @@ void cloud_struct::announce_actor_engulfed(const actor *act,
         return;
 
     // Normal clouds. (Unmodified rain clouds have a different message.)
-    const bool raincloud = type == CLOUD_RAIN || type == CLOUD_STORM;
-    const bool unmodified = cloud_name() == cloud_type_name(type, false);
-    if (!raincloud || !unmodified)
+    if (type != CLOUD_RAIN && type != CLOUD_STORM)
     {
         mprf("%s %s in %s.",
              act->name(DESC_THE).c_str(),
